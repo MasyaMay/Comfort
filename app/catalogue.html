@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<a href="index.html" class="logo_a">
+				<div class="logo">
+					<img src="img/header/logo.png" alt="">
+					<span class="logo_text">Comfort</span>
+				</div>
+			</a>
+			<nav>
+				<a href="catalogue.html">Каталог</a>
+				<a href="work.html">Наши работы</a>
+				<a href="#">Цены</a>
+				<a href="#">О компании</a>
+				<a href="#contact-footer">Контакты</a>
+			</nav>
+			<div class="contaxt-block">
+				<img class="contaxt-block_img" src="img/header/phone.png" alt="#">
+				<span class="contaxt-block_phone">8 (495) 779-66-38</span>
+				<div class="contaxt-block_text">Режим работы с 9:00 до 18:00</div>
+			</div>
+		</div>
+	</header>
+	<!-- Модальное окно фиксированной ширины -->
+	<div id="win" style="display:none;">
+		<div class="overlay"></div>
+		<div class="visible">
+			<div class="form">  
+				<form id="contact" action="mailer/smart.php" method="POST">
+					<p class="form-header">ОСТАВЬТЕ ЗАЯВКУ</p>
+					<p class="form-header_text">И мы свяжемся с Вами в течение 15 минут</p>
+					<input type="text" name="user_name" placeholder="Введите имя" required>
+					<input id="phone" type="tel" name="user_phone" placeholder="Введите телефон" required>
+					<button type="submit" id="contact-submit">ОТПРАВИТЬ</button>
+				</form>
+				<button type="button" id="close" onClick="getElementById('win').style.display='none';">x</button>
+			</div>
+		</div>
+	</div>
+	<!-- Модальное окно фиксированной ширины -->
+
+	<div class="bgc">
+		<div class="four"><h1>Каталог</h1></div>
+		<div class="container">
+			<a name="horizontal"></a>
+			<p id="header-block">Горизонтальные жалюзи</p>
+			<div class="types">
+				<div class="row">
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/horizontal2.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Классические жалюзи</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/horizontal1.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Кассетные жалюзи</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/horizontal3.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Деревянные жалюзи</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>	
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/horizontal4.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Фотожалюзи</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>		
+		<div class="container">
+			<!-- <p class="header-catalogue"><h1>Каталог</h1></p> -->
+			<p id="header-block">Вертикальные жалюзи</p>
+			<div class="types">
+				<div class="row">
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/vertical1.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Тканевые жалюзи</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/vertical2.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Классические жалюзи</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/vertical3.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">МУЛЬТИФАКТУРНЫЕ</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>	
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/vertical4.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">ФОТОЖАЛЮЗИ</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>	
+		<div class="container">
+			<!-- <p class="header-catalogue"><h1>Каталог</h1></p> -->
+			<p id="header-block">Рулонные шторы</p>
+			<div class="types">
+				<div class="row">
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/types/roller.png" alt="" class="types-items_img">
+							<p class="types-items_text">Классические</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/roller1.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">МИНИ</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/roller2.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">День-ночь</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>	
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/roller3.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">кассетные</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<!-- <p class="header-catalogue"><h1>Каталог</h1></p> -->
+			<p id="header-block">другие варианты</p>
+			<div class="types">
+				<div class="row">
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/roller2.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Шторы Зебра</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/types/blinds pleated.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">ЖАЛЮЗИ Плиссе</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/horizontal4.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Фотожалюзи</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>	
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/logo.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Жалюзи с логотипом</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>	
+		<div class="container">
+			<div class="types">
+				<div class="row">
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/rim.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Римские жалюзи</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/auto.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Автоматические</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/bambukovye.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">бамбуковые</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>	
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/catalogue/organza.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Веревочные шторы</p>
+							<div class="types-items_block-button">
+								<button class="button types-items_button button_mr">подробнее</button>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="consultation">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-6">
+					<div class="consultation_block">
+						<div class="consultation_block-header">Не знаете какие жалюзи выбрать?</div>
+						<div class="consultation_block-paragraph">Оставьте заявку на консультацию и наш специалист подробно ответит на все Ваши вопросы. Это бесплатно.</div>
+						<button class="button" onClick="getElementById('win').removeAttribute('style');">бесплатная консультация</button>
+					</div>
+				</div>
+				<div class="col-3">
+					<img class="consultation-img" src="img/div/consultation.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<a name="contact-footer"></a>
+		<div class="bgc_4">
+			<div class="container">
+				<div class="contact">
+					<div class="row">
+						<div class="col-12 col-lg-8 col-xl-7">
+							<div class="map">
+								<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aead13e9be970d2874d9708636a87af10c2a3570115e2973c81ecceaf6723749c&amp;width=550&amp;height=334&amp;lang=ru_RU&amp;scroll=false"></script>
+							</div>
+						</div>
+						<div class="col-12 col-lg-3 col-xl-4">
+							<div class="contact_block">
+								<div class="contact_block-header">КОНТАКТЫ</div>						
+								<div class="contact_block-paragraph">
+									<img src="img/contact/address.png" alt="">
+									<p class="contact_block-header-text">АДРЕС</p>
+									<p class="contact_block-text">Казань, ул. Серова 51, офис 324</p>
+									<img src="img/contact/phone_mini.png" alt="">
+									<p class="contact_block-header-text">ТЕЛЕФОН</p>
+									<p class="contact_block-text">8 (495) 779-66-38</p>
+									<button class="button contact-button" onClick="getElementById('win').removeAttribute('style');">задать вопрос</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p class="copyright">Copyright © 2013 - 2018 Comfort - жалюзи для вашего дома</p>
+					<p class="author">Сайт разработан: <a href="https://vk.com/0helpme" class="author_vk">Ирина Антипина</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="js/script.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> 
+	<script src="js/jquery.maskedinput.min.js"></script>
+</body>
+</html>

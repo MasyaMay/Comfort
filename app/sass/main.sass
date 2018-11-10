@@ -1,0 +1,61 @@
+@import "header"
+@import "welcome"
+@import "plus"
+@import "types"
+@import "consultation"
+@import "comment"
+@import "footer"
+@import "form"
+@import "overlay"
+@import "catalogue"
+@import "media"
+
+
+body
+	font-family: Arial, sans-serif
+	box-sizing: border-box
+	text-decoration: none
+
+p
+	margin-bottom: 16px
+
+.bgc
+	background-color: #f8f8f8
+	&_4
+		background-color: #666666
+
+.welcome_div
+	display: none
+
+#header-block
+ padding-top: 80px
+ padding-bottom: 30px
+ font-size: 28px
+ font-weight: 700
+ text-transform: uppercase;
+ color: #666666
+ text-align: center
+
+.button
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.09), 0 5px 5px 0 rgba(0, 0, 0, 0.11)
+	cursor: pointer
+	transition-duration: .4s
+	margin-top: 20px
+	width: 263px
+	height: 60px
+	border: 2px solid #ff9933
+	background-color: rgba(255, 255, 255, 0.3)
+	text-transform: uppercase
+	font-size: 16px
+	font-weight: 600
+	color: #ff9933
+	&:hover 
+		border: none
+		background-color: #f5ab00
+		color: #fff
+	&:active
+		border: 2px solid #f5ab00
+		background-color: rgba(245, 171, 0, 0.18)
+		color: #f5ab00
+	&:focus
+		outline: none

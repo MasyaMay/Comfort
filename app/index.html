@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<a href="index.html" class="logo_a">
+				<div class="logo">
+					<img src="img/header/logo.png" alt="">
+					<span class="logo_text">Comfort</span>
+				</div>
+			</a>
+			<nav>
+				<a href="catalogue.html">Каталог</a>
+				<a href="#work">Наши работы</a>
+				<a href="#">Цены</a>
+				<a href="#">О компании</a>
+				<a href="#contact-footer">Контакты</a>
+			</nav>
+			<div class="contaxt-block">
+				<img class="contaxt-block_img" src="img/header/phone.png" alt="#">
+				<span class="contaxt-block_phone">8 (495) 779-66-38</span>
+				<div class="contaxt-block_text">Режим работы с 9:00 до 18:00</div>
+			</div>
+		</div>
+	</header>
+	<div id="win" style="display:none;">
+		<div class="overlay"></div>
+		<div class="visible">
+			<div class="form">  
+				<form id="contact" action="mailer/smart.php" method="POST">
+					<p class="form-header">ОСТАВЬТЕ ЗАЯВКУ</p>
+					<p class="form-header_text">И мы свяжемся с Вами в течение 15 минут</p>
+					<input type="text" name="user_name" placeholder="Введите имя" required>
+					<input id="phone" type="tel" name="user_phone" placeholder="Введите телефон" required>
+					<button type="submit" id="contact-submit">ОТПРАВИТЬ</button>
+				</form>
+				<button type="button" id="close" onClick="getElementById('win').style.display='none';">x</button>
+			</div>
+		</div>
+	</div>
+	<main>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="welcome_div">Установим жалюзи в вашей квартире</div>
+				<div class="col-12 col-md-5 col-lg-7">
+					<div class="welcome_text">
+						<div class="welcome_text_p">
+							<p>Установим жалюзи <span class="welcome_span"> в вашей квартире</span></p>
+							<p>за 2 часа, с полной гарантией</p>
+							<p>и бесплатной доставкой</p>
+						</div>
+						<div class="welcome_text_free">
+							Закажите выезд замерщика на дом. <span class="welcome_text_free-it">Это бесплатно!</span>
+						</div>
+						<div class="welcome_button-block">
+							<button class="button welcome_button" onClick="getElementById('win').removeAttribute('style');">вызвать замерщика</button>
+							<a href="#types"><button class="button">выбрать жалюзи</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-7 col-lg-5">
+					<div class="form_top">
+						<div class="form">  
+							<form id="contact" action="mailer/smart.php" method="POST">
+								<p class="form-header">ОСТАВЬТЕ ЗАЯВКУ</p>
+								<p class="form-header_text">И мы свяжемся с Вами в течение 15 минут</p>
+								<input type="text" name="user_name" placeholder="Введите имя" required>
+								<input id="phone-main" type="tel" name="user_phone" placeholder="Введите телефон" required>
+								<button type="submit" id="contact-submit">ОТПРАВИТЬ</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<div class="container">
+		<div class="plus">
+			<div class="row justify-content-center">
+				<div class="col-12 col-sm-9 col-md-4">
+					<div class="plus_items">
+						<img class="plus_items-img" src="img/plus/engineering.png" alt="#">
+						<p class="plus_items-paragraph">Бесплатный замер</p>
+						<p class="plus_items-paragraph-text">Замерщик приезжает в точное время, за каждую минуту опоздания начисляем скидку 1%</p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-9 col-md-4">
+					<div class="plus_items">
+						<img class="plus_items-img" src="img/plus/shipped.png" alt="#">
+						<p class="plus_items-paragraph">Бесплатная доставка</p>
+						<p class="plus_items-paragraph-text">Доставка в удобное для вас время, все жалюзи аккуратно упакованы</p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-9 col-md-4">
+					<div class="plus_items">
+						<img class="plus_items-img" src="img/plus/guarantee.png" alt="#">
+						<p class="plus_items-paragraph">2 года гарантии</p>
+						<p class="plus_items-paragraph-text">2 года гарантии на любую поломку. У нас нет не гарантийных случаев!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bgc">
+		<a name="types"></a>
+		<div class="container">
+			<p id="header-block">Виды жалюзи</p>
+			<div class="types">
+				<div class="row">
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/types/horizontal.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">Горизонтальные жалюзи</p>
+							<div class="types-items_block-button">
+								<a href="catalogue.html"><button class="button types-items_button button_mr">подробнее</button></a>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/types/vertical.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">вертикальные жалюзи</p>
+							<div class="types-items_block-button">
+								<a href="catalogue.html"><button class="button types-items_button button_mr">подробнее</button></a>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/types/roller.png" alt="" class="types-items_img">
+							<p class="types-items_text">рулонные жалюзи</p>
+							<div class="types-items_block-button">
+								<a href="catalogue.html"><button class="button types-items_button button_mr">подробнее</button></a>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>	
+					</div>
+					<div class="col-12 col-md-6 col-xl-3">
+						<div class="types-items">
+							<img src="img/types/blinds pleated.jpg" alt="" class="types-items_img">
+							<p class="types-items_text">другие варианты</p>
+							<div class="types-items_block-button">
+								<a href="catalogue.html"><button class="button types-items_button button_mr">подробнее</button></a>
+								<button class="button types-items_button" onClick="getElementById('win').removeAttribute('style');">заказать</button>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="container">
+		<div class="consultation">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-6">
+					<div class="consultation_block">
+						<div class="consultation_block-header">Не знаете какие жалюзи выбрать?</div>
+						<div class="consultation_block-paragraph">Оставьте заявку на консультацию и наш специалист подробно ответит на все Ваши вопросы. Это бесплатно.</div>
+						<button class="button" onClick="getElementById('win').removeAttribute('style');">бесплатная консультация</button>
+					</div>
+				</div>
+				<div class="col-3">
+					<img class="consultation-img" src="img/div/consultation.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bgc">
+		<div class="container">
+			<p id="header-block">Как мы работаем?</p>
+			<div class="row justify-content-center">
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="plus_items plus_items_work">
+						<img class="plus_items-img" src="img/work/one.png" alt="#">
+						<p class="plus_items-paragraph">Ваша заявка</p>
+						<p class="plus_items-paragraph-text">Оставить заявку можно на сайте, по телефону или в офисе </p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="plus_items plus_items_work">
+						<img class="plus_items-img" src="img/work/two.png" alt="#">
+						<p class="plus_items-paragraph">Бесплатный замер</p>
+						<p class="plus_items-paragraph-text">Замерщики выезжают к Вам с образцами в любой день недели</p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="plus_items plus_items_work">
+						<img class="plus_items-img" src="img/work/three.png" alt="#">
+						<p class="plus_items-paragraph">Заключаем договор</p>
+						<p class="plus_items-paragraph-text">Оформляем договор, сразу после замеров или в офисе</p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="plus_items plus_items_work">
+						<img class="plus_items-img" src="img/work/four.png" alt="#">
+						<p class="plus_items-paragraph">Бесплатная доставка</p>
+						<p class="plus_items-paragraph-text">Доставляем бесплатно в удобное для Вас время</p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="plus_items plus_items_work">
+						<img class="plus_items-img" src="img/work/five.png" alt="#">
+						<p class="plus_items-paragraph">Производим монтаж</p>
+						<p class="plus_items-paragraph-text">Приезжает монтажник и устанавливает изделия</p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="plus_items plus_items_work">
+						<img class="plus_items-img" src="img/work/six.png" alt="#">
+						<p class="plus_items-paragraph">Готовый результат</p>
+						<p class="plus_items-paragraph-text">Вы принимаете работу и наслаждаетесь приобретением</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="work-slider">
+			<p id="header-block">Наши работы</p>
+			<div class="row justify-content-center">
+				<div class="fotorama" data-width="900" data-nav="thumbs" data-allowfullscreen="true" data-fit="cover" data-loop="true" data-transition="crossfade" data-autoplay="3000">			
+					<div data-img="img/slider/slider_1.jpg" class="footer-slider" width="147" height="96"><span class="footer-slider_text">ул. 3 Плодоовощная база, 4а</span></div>
+					<div data-img="img/slider/slider_2.jpg" class="footer-slider" width="147" height="96"><span class="footer-slider_text">ул. Космонавтов, 52</span></div>
+					<div data-img="img/slider/slider_3.jpg" class="footer-slider" width="147" height="96"><span class="footer-slider_text">ул. Николая Ершова, 6</span></div>
+					<div data-img="img/slider/slider_4.jpg" class="footer-slider" width="147" height="96"><span class="footer-slider_text">ул. Аделя Кутуя, 15к3</span></div>
+					<div data-img="img/slider/slider_5.jpg" class="footer-slider" width="147" height="96"><span class="footer-slider_text">ул. Пугачевская, 13в</span></div>
+					<div data-img="img/slider/slider_6.jpg" class="footer-slider" width="147" height="96"><span class="footer-slider_text">ул. Тихомирнова, 80/7</span></div>
+					<div data-img="img/slider/slider_7.jpg" class="footer-slider" width="147" height="96"><span class="footer-slider_text">ул. Нурсултана Назарбаева, 44а</span></div>
+					<div data-img="img/slider/slider_8.jpg" class="footer-slider" width="147" height="96"><span class="footer-slider_text">ул. Даурская, 13</span></div>
+					<div data-img="img/slider/slider_9.jpg" class="footer-slider" width="147" height="96"><span class="footer-slider_text">ул. Гарифьянова 19/10</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="consultation">
+			<div class="row justify-content-center">
+				<div class="col-5 col-lg-3">
+					<img class="consultation-img" src="img/div/action.jpg" alt="">
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="consultation_block">
+						<div class="consultation_block-header">Закажите установку жалюзи прямо сейчас</div>
+						<div class="consultation_block-paragraph">И получите в подарок москитную сетку для окна</div>
+						<button class="button" onClick="getElementById('win').removeAttribute('style');">заказать жалюзи</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bgc">
+		<div class="container">
+			<p id="header-block">отзывы о нашей работе</p>
+			<div class="comment">
+				<div class="row justify-content-center">
+					<div class="fotorama" data-width="1000" data-height="400" data-loop="true" data-transition="crossfade">
+						<div class="container">
+							<div class="consultation consultation-comment">
+								<div class="row justify-content-center">
+									<div class="col-md-4">
+										<img class="consultation-img" src="img/comment/woman.svg" alt="">
+									</div>
+									<div class="col-9 col-md-6">
+										<div class="consultation_block">
+											<div class="consultation_block-header">Лариса</div>
+											<div class="consultation_block-paragraph">Хотела сначала брать подороже, но сэкономила. Взяла простые кассетные жалюзи. Ярко-сиреневого цвета. Качество отличное. С обоями - полная гармония. На сэкономленные средства еще и озеленение кухни добавила. Ляпота!</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="consultation consultation-comment">
+								<div class="row justify-content-center">
+									<div class="col-4">
+										<img class="consultation-img" src="img/comment/man.svg" alt="">
+									</div>
+									<div class="col-9 col-md-6">
+										<div class="consultation_block">
+											<div class="consultation_block-header">Виктор</div>
+											<div class="consultation_block-paragraph">Применил у себя рулонно-кассетные жалюзи "зебра" и мне кажется, что это действительно наилучшее решение для интерьера, т.к. классно способствуют защите от посторонних взглядов, а учитывая, что я живу на первом этаже - лучше решения и не придумаешь!</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="consultation consultation-comment">
+								<div class="row justify-content-center">
+									<div class="col-4">
+										<img class="consultation-img" src="img/comment/man (2).svg" alt="">
+									</div>
+									<div class="col-9 col-md-6">
+										<div class="consultation_block">
+											<div class="consultation_block-header">Егор</div>
+											<div class="consultation_block-paragraph">Заказали горизонтальные жалюзи на мансардные окна. Цвет подобран под цвет рам. Заказ выполнен в срок, установили быстро. Спустя год все остается в изначальном виде. Механизмы надежные. Мы довольны. Благодарим компанию и желаем успехов в новом году!</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<a name="contact-footer"></a>
+		<div class="bgc_4">
+			<div class="container">
+				<div class="contact">
+					<div class="row">
+						<div class="col-12 col-lg-8 col-xl-7">
+							<div class="map">
+								<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aead13e9be970d2874d9708636a87af10c2a3570115e2973c81ecceaf6723749c&amp;width=550&amp;height=334&amp;lang=ru_RU&amp;scroll=false"></script>
+							</div>
+						</div>
+						<div class="col-12 col-lg-3 col-xl-4">
+							<div class="contact_block">
+								<div class="contact_block-header">КОНТАКТЫ</div>						
+								<div class="contact_block-paragraph">
+									<img src="img/contact/address.png" alt="">
+									<p class="contact_block-header-text">АДРЕС</p>
+									<p class="contact_block-text">Казань, ул. Серова 51, офис 324</p>
+									<img src="img/contact/phone_mini.png" alt="">
+									<p class="contact_block-header-text">ТЕЛЕФОН</p>
+									<p class="contact_block-text">8 (495) 779-66-38</p>
+									<button class="button contact-button" onClick="getElementById('win').removeAttribute('style');">задать вопрос</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p class="copyright">Copyright © 2013 - 2018 Comfort - жалюзи для вашего дома</p>
+					<p class="author">Сайт разработан: <a href="https://vk.com/0helpme" class="author_vk">Ирина Антипина</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="js/script.js"></script>
+	<script src="js/fotorama.js"></script> 
+	<script src="js/jquery.maskedinput.min.js"></script>
+</body>
+</html>
